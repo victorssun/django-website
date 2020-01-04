@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{% static 'style_main.css' %}">
+		<!--- animation on scroll --->
+		<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+		<!--- jquery for fadein --->
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130796621-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-130796621-1');
+		</script>
+
+		<link rel="icon" type="image/gif/png" href="{% static 'imgs/top/logo_title.png' %}">
+		<title>Victor Sun | Personal Webpage</title>
+	</head>
+
+	<body>
+		<div id="container">
+<!--- navigation bar--->
+			<div id="nav">
+				<div id="container_width">
+					<img class="nav_icon" src="{% static 'imgs/top/logo_nav.png' %}">
+					<div class="dropdown">
+						<a href="">Home</a>
+						<div class="dropdown-content">
+							<a href="./">Cover page</a>
+						</div>
+					</div>					
+					<a href="#about_anchor">About</a>
+					<a href="#projects_anchor">Projects</a>
+					<a href="#contact_anchor">Contact</a>
+					<div class="dropdown">
+						<a href="">Links</a>
+						<div class="dropdown-content">
+							<a href="./recipes" target="_blank">Cooking</a>
+							<a href="https://www.linkedin.com/in/victorssun/" target="_blank">LinkedIn</a>	
+							<a href="https://github.com/victorssun" target="_blank">Github</a>							
+							<a href="mailto:contact@victorssun.com">Email</a>
+						</div>
+					</div>
+					<img class="nav_icon" src="{% static 'imgs/top/logo_nav.png' %}">
+				</div>
+			</div>
+<!--- header --->
+			<div id="header">
+				<span>
+					<h1>Victor Sun</h1> <p></p>
+					<p>Data enthusiast. I like looking at graphs.</p>
+					<!--- <p> (website under construction) </p> --->
+					<a href="#contact_anchor"><u>Get in touch!</u> <img class="header" src="{% static 'imgs/top/envelope.png' %}" height="22px" style=vertical-align:middle></a>
+				</span>
+			</div>
+<!--- about --->
+			<a class="anchor" id="about_anchor"></a>
+			<div id="about"> 
+				<div id="container_width">
+	<!--- side --->
+					<div id="side" data-aos="zoom-in-up">
+						<div id="side2">
+							<h3>Education</h3>
+							<p><b>Master of Science in Chemistry, Biophysics Specialization</b><br>
+							<i>University of Victoria <span style="float:right;">2019</span></i><br></p>
+							
+							<p><b>Bachelor of Science, Honours in Chemistry, Major in Economics</b><br>
+							<i>University of British Columbia - Okanagan <span style="float:right;">2017</span></i><br></p>
+							
+							<p><center><img class="edu_icon" src="{% static 'imgs/uvic.png' %}" height=100px> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  <img class="edu_icon" src="{% static 'imgs/ubc.png' %}" height=100px></center></p>
+						</div>
+
+						<div id="side2">
+							<h3>Selected Positions</h3>
+							<p><b>Graduate Research Assistant - Biophysics</b><br>
+							<i>University of Victoria <span style="float:right;">2017 - 2019</span></i><br></p>
+							
+							<p><b>Graduate Teaching Assistant - Chemistry</b><br>
+							<i>University of Victoria <span style="float:right;">2017 - 2019</span></i><br></p>
+							
+							<p><b>Undergraduate Research Assistant - Biophysics</b><br>
+							<i>University of British Columbia - Okanagan <span style="float:right;">2016 - 2017</span></i><br></p>
+							
+							<p><b>Undergraduate Teaching Assistant - Chemistry, Physics, Economics</b><br>
+							<i>University of British Columbia - Okanagan <span style="float:right;">2015 - 2017</span></i><br></p>						
+						</div>
+						
+						<div id="side2">
+							<h3>Languages (Programming)</h3>
+							<li>Python</li>
+							<li>VBA</li>
+							<li>Matlab</li>
+							<li>SQL</li>
+							<li>HTML/CSS</li>
+						</div>
+						<br>				
+					</div>
+	<!--- about me --->
+					<div data-aos="fade-up">
+						<h2>About Me</h2>
+						<div id="main">
+							<span>
+								<img class="img" src="{% static 'imgs/about/about_pic.png' %}" width="100%" height="">
+							</span>
+							<span>
+								<p>I am a data enthusiast, like looking at graphs. Chemistry & economics undergraduate, biophysical chemistry graduate. Self-taught programmer. Always enjoy learning.<br><br>
+								I received a Master's in Chemistry at UVic. My area of research was the development of a multi-modual imaging platform to explore early bacterial cell adhesion and biofilm growth on silica substrates. This utilized background in biophysics, spectroscopy, programming, and engineering.<br><br>
+								I studied for a dual Bachelor's in chemistry and economics at UBC-O, where I completed biophysical research on rolling cell adhesion. This sparked my interest in interdisciplinary fields of study and work, especially my huge interest in programming and analysis.<br><br>
+								Outside of the lab, I enjoy programming random things, cooking experimental home-style foods, reading science and history books, and watching movies. See <a href="https://github.com/victorssun" target=_blank>Github</a> and <a href="#projects_anchor">below</a> for selected projects. See my <a href="./recipes" target=_blank>cooking portfolio</a> for foods I cook.</p>
+							</span>
+							<br>
+							<span class="column3">
+								<center><h3>Learner</h3>
+								<img class="column3" src="{% static 'imgs/about/about_learner.png' %}"></center>
+								<p>I am a generalist with interests in a variety of fields in chemistry, programming, engineering, and economics. I consider myself a specialist in analytical chemistry and instrumentation. I enjoy learning at work and at home.</p>
+							</span>
+							<span class="column3">
+								<center><h3>Teamworker</h3>
+								<img class="column3" src="{% static 'imgs/about/about_teamworker.png' %}"></center>
+								<p>I have collaborated with others on research and school projects. Currently tasked with researching bacterial biofilms in a group which will utilize my findings for a stronger mechanistic understanding of cell adhesion on surfaces.</p>
+							</span>
+							<span class="column3">
+								<center><h3>Technical</h3>
+								<img class="column3" src="{% static 'imgs/about/about_technical.png' %}"></center>
+								<p>Attention to detail with experience in a variety of technical skills. This includes safe and proper handling procedures in instrumentation, analytical  technique, lab benchtop work, electronics, programming.</p>
+							</span>
+						</div>	
+					</div>
+				</div>		
+			</div>		
+<!--- projects --->
+			<a class="anchor" id="projects_anchor"></a>
+			<div id="projects">
+				<div data-aos="fade-up">
+					<div id="container_width">
+					<h2>Selected Projects</h2>
+						<div class="grid">
+							<div class="cell">
+								<center><h3>PROGRAMMING & SOFTWARE</h3></center>
+							</div>
+							<div class="cell" id="bordercell">
+								<center><h3>CHEMISTRY & INSTRUMENTATION</h3></center>
+							</div>
+							<div class="cell">
+								<center><h3>ECONOMICS & FINANCES</h3></center>
+							</div>
+							<div class="cell">								
+								<center><h4>Software Creation and Scientific Analysis</h4>
+								<img src="{% static 'imgs/projects/proj_software.png' %}"></center>
+								<p>Created various Python scripts to control cameras, motors, and other hardware. Automated experiments and analyses were done using scripts.</p>
+							</div>
+							<div class="cell" id="bordercell">
+								<center><h4>Design of a Raman Microscope</h4>
+								<img src="{% static 'imgs/projects/proj_raman.png' %}"></center>
+								<p>A fun work project where I developed a Raman microscope imaging platform, a hardware and software system, from optical parts. The system was used for bacterial cell adhesion studies.</p>
+							</div>
+							<div class="cell">
+								<center><h4>Stock Market Analysis</h4>
+								<img src="{% static 'imgs/projects/proj_qt.png' %}"></center>
+								<p>A continuation of a personal project, utilizing the Python API wrapper. Grabbed stock market data and ran basic analysis and visualization. Analyses included MCAD, relative strength index, and fitting equations.</p>
+							</div>
+							<div class="cell">
+								<center><h4>Python Wrapper for Questrade API</h4>
+								<img src="{% static 'imgs/projects/proj_qt.png' %}"></center>
+								<p>One of my favourite personal projects. Completed a Python wrapper for Questrade API, that can be used to grab stock market or personal portfolio data from the stock broker's website.</p>
+							</div>
+							<div class="cell" id="bordercell">
+								<center><h4>Design of a Syringe Pump Microscope System</h4>
+								<img src="{% static 'imgs/projects/proj_syringe.jpg' %}"></center>
+								<p>My first academic research project, to develop a hardware-software (MATLAB) platform for darkfield microscope with syringe pump capabilities to be used for flow chamber cell adhesion studies.</p>								
+							</div>
+							<div class="cell">
+								<center><h4>Linear Regression Analysis on Household Income</h4>
+								<img src="{% static 'imgs/projects/proj_regression.png' %}"></center>
+								<p>A team-class project using R linear regression and statistics to analyze household income from a publically available resource to model and identify specific parameters most significant to income.<p>								
+							</div>
+							<div class="cell">
+								<center><h4>Raspberry Pi Wall Monitor</h4>
+								<img src="{% static 'imgs/projects/proj_pi.png' %}"></center>
+								<p>My first Raspberry Pi project. Created a personalized wall monitor with hardware parts and Python that displays the day, time, weather, and current stock market information.</p>
+							</div>
+							<div class="cell" id="bordercell">
+							<center><h4>Produce Identification using a Mini IR Spectrometer</h4>
+								<img src="{% static 'imgs/projects/proj_ir.png' %}"></center>
+								<p>A team-class project to identify produce using a portable IR spectrometer and R statistical analysis.</p>
+							</div>
+							<div class="cell">
+								<center><h4>Personal Finance Budgeting</h4>
+								<img src="{% static 'imgs/projects/proj_excel.png' %}"></center>
+								<p>My first personal project that I have ever done that has been ongoing. I keep an Excel spreadsheet of all my personal spending habits, and then implemented VBA automation for easier updating.</p>							
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+<!--- contact --->
+			<a class="anchor" id="contact_anchor"></a>
+			<div id="contact">
+				<div data-aos="fade-right">
+					<div id="container_width">
+						<h2>Contact</h2>
+						<center>
+						<div id="column11">
+							<div class="front">
+								<center><img src="{% static 'imgs/contact/businesscard_front.png' %}" width="400px"></center>
+							</div>
+							<div class="back">
+								<center><img src="{% static 'imgs/contact/businesscard_back.png' %}" width="400px"></center>
+							</div>
+						</div>
+						<div id="column12">
+							<div id="contact-box">
+								<p><img src="{% static 'imgs/contact/contact_email.png' %}" height="30px" style=vertical-align:middle>
+								<a href="mailto:contact@victorssun.com" title="contact@victorssun.com">contact@victorssun.com</a></p>
+								<p><img src="{% static 'imgs/contact/contact_linkedin.png' %}" height="30px" style=vertical-align:middle>
+								<a href="https://www.linkedin.com/in/victorssun/" title="github.com/victorssun" target="_blank">victorssun</a></p>
+								<p><img src="{% static 'imgs/contact/contact_git.png' %}" height="30px" style=vertical-align:middle>
+								<a href="https://github.com/victorssun" title="github.com/victorssun" target="_blank">victorssun</a></p>
+							</div>
+						</div>
+						</center>
+					</div>
+				</div>
+			</div>
+<!--- footer --->
+			<div id="footer">
+				<p>Bye.</p>
+			</div>
+		</div>
+		
+<!--- animation -->
+		<script>$('#header').hide().fadeIn(600);</script>
+		<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+		<script>AOS.init();</script>
+	</body>
+</html>

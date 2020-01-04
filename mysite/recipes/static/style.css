@@ -1,0 +1,30 @@
+
+.nav_icon {
+	height: 15px;
+	vertical-align: middle;
+	margin: 0px 5px;
+}
+
+body {
+    //background: gray url("") no-repeat;
+	background: #EFEFEF;
+}
+
+#content {
+	margin: 20px;
+}
+
+#footer_style {
+	background: #252525;
+	color: white;
+}
+
+.v-center {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+
+.box-shift {
+   padding-left: 40px;
+}

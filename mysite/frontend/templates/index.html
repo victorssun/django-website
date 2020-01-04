@@ -1,0 +1,54 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">		
+		<link rel="stylesheet" href="{% static 'style_index.css' %}">
+		
+		<!--- jquery for fadein/animation --->
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>			
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130796621-1"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+
+		  gtag('config', 'UA-130796621-1');
+		</script>
+
+		
+		<link rel="icon" type="image/gif/png" href="{% static 'imgs/top/logo_title.png' %}">
+		<title>Victor Sun | Hello</title>
+	</head>
+	
+	<body>
+		<canvas id="motion-js"></canvas>
+		<div id="bg" class="container-fluid">
+			<div class="row">
+				<div class="col-sm-6 offset-sm-3">
+					<div id="title" class="text-center">
+						<img id="logo" src="{% static 'imgs/logo_black.png' %}">
+						<h1>Victor Sun</h1>
+						<h6>I am a data enthusiast. I like looking at graphs.</h6>
+						<h6><a href="mailto:contact@victorssun.com" title="contact@victorssun.com">Contact</a> | 
+						<a href="https://www.linkedin.com/in/victorssun/" target="_blank" title="github.com/victorssun">LinkedIn</a> | 
+						<a href="https://github.com/victorssun" target="_blank" title="github.com/victorssun">Github</a></h6>
+						<hr>
+						<p>Self-taught programmer. B.Sc. Chemistry & Economics. <br>
+						M.Sc. Chemistry. Aspiring human. Always enjoy learning.</p>
+						<p>Reader of books. Watcher of movies. <a href="./recipes" target="_blank" title="Recipes">Cooker of foods</a>.</p>
+						<h6><a href="./main" title="Personal Webpage">Enter</a></h6>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="{% static 'motion.js' %}"></script>
+		<script>$('#title').hide().fadeIn(800);</script>
+
+	</body>
+</html>

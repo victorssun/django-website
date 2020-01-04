@@ -1,0 +1,296 @@
+@import url('https://fonts.googleapis.com/css?family=Alegreya+Sans+SC|EB+Garamond|Lato|Nunito|Roboto');
+html {
+	height: 100%;
+	//min-width: 1080px;
+}
+body, #nav .nav_icon {
+	background: #000000;
+	//font-family: Arial, sans-serif;
+	//font-family: 'Mandali', sans-serif;
+	font-family: 'Lato', sans-serif;		
+	line-height: 1.25;	
+	font-size: 13px;
+	height: 13px;
+}
+
+p, li {
+	margin-top: 0;
+}
+
+a {
+	margin-top: 0;
+	text-decoration: none;
+}
+
+h1, h2, h3, h4 {
+	margin: 0 0 5px;
+}
+
+h1 {
+	font-size: 34px;
+	font-family: 'EB Garamond', serif;
+}
+
+h2 {
+	margin: 4px 0px 8px -12px;
+	font-size: 26px;
+	font-family: 'Alegreya Sans SC', serif;
+}
+
+h3 {
+	font-size: 18px;
+	font-family: 'EB Garamond', serif;
+}
+
+h4 {
+	font-size: 14px;
+	font-family: 'Lato', sans-serif;
+	font-weight: bold;
+	
+}
+
+#container {
+	width: 100%;
+	height: auto;
+}
+
+#container_width {
+	width: 95%;
+	height: auto;
+	margin: 0px auto;
+	position: relative;
+}
+
+.anchor {
+    display: block;
+    position: relative;
+    top: -30px;
+    visibility: hidden;
+}
+
+#nav, #nav a, #nav a:hover, .dropdown-content a { 
+	padding: 10px 10px;	
+	color: white;
+}
+
+#nav {
+	top: 0;
+	left: 0;
+	position: fixed;
+	text-align: right;
+	z-index: 10;
+	width: 100%;
+	padding-left: 0%;
+	color: #ffffff;
+	background-color: rgb(0, 0, 0, 0.9);
+	border-bottom-style: solid;
+	border-bottom-color: #ffffff;
+	border-bottom-width: 1px;
+}
+#nav a:hover, .dropdown-content a:hover {
+	background-color:  #FFF0D2;
+	color: black;
+	border-radius: 5px;	
+}
+
+#nav .nav_icon {
+	//height: 13px;
+	vertical-align: middle;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+	border-top-style: solid;
+	border-top-color: #ffffff;
+	border-top-width: 1px;  display: none;
+	position: absolute;
+	top: 25px;
+	left: 0px;
+	text-align: left;
+	background-color: black;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	border-radius: 5px;
+	z-index: 9;
+}
+
+.dropdown-content a, .dropdown:hover .dropdown-content {
+	display: block;
+}
+
+#header, #about, #projects, #contact, #side{
+	//opacity: 0.5;
+}
+#header {
+	background: url(imgs/header.png) no-repeat;
+    background-attachment: fixed;	
+    background-position: center top;	
+	background-size: cover;
+	min-height: 650px;
+	line-height: 650px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+	text-shadow: 
+		-1px -1px 0 #000,
+		1px -1px 0 #000,
+		-1px 1px 0 #000,
+		1px 1px 0 #000;  
+}
+
+#header a, #header p {
+	color: white;
+	font-size: 15px;
+}
+
+#header span {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: normal;
+}
+
+#about, #projects, #side, #contact {
+	padding: 10px;
+}
+
+#main {
+	width: 63%;
+}
+
+#side {
+	width: 30%;
+	height: 100%;
+	float: right;
+	top: 0px;
+	right: 0px;
+	position: relative;
+	background-color: #d4e1f9;
+	padding: 20px;
+	border-radius: 16px;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);	
+}
+
+#side2 h3{
+	margin-left: -10px;
+}
+
+#side2 li {
+	margin-left: 12px;
+}
+
+#projects p {
+	text-align: justify;
+	text-justify: inter-word;
+}
+
+#about {
+	background-color: #e0e0e0;
+	overflow: visible;
+}
+
+#about a {
+	color: black;
+	text-decoration: underline;
+}
+
+#about span {
+    vertical-align: middle;
+    display: table-cell;
+	padding: 0px 10px;
+}
+
+#about span.column3 {
+	vertical-align: baseline;
+	width: 33%;
+}
+
+#about img.column3 {
+	height: 100px;
+}
+
+#projects {
+	background-color: #c1c1c1;
+	overflow: visible;
+}
+
+#projects img {
+	height: 80px;
+	border-radius: 8px;
+}
+
+#projects .grid {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+#projects .cell {
+	padding: 0px 16px 8px;
+	//background-color: #999;
+}
+
+#bordercell {
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+#contact {
+	background-color: #777777;
+	overflow: hidden;
+	height: 300px;
+}
+
+#contact #column11 {
+	display: inline-block;
+	width: 400px;
+	position: relative;
+	transition: transform 1.0s;
+	transform-style: preserve-3d;
+}
+
+#contact #column11:hover {
+	transform: rotateY(180deg);
+}
+
+.front, .back {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	backface-visibility: hidden;
+}
+
+.back {
+	transform: rotateY(180deg);
+}
+
+#column12 {
+	float: right;
+	width: 50%;
+	margin-top: 50px;
+}
+
+#column12 a {
+	color: black;
+	font-family: 'Nunito';
+	text-decoration: underline;
+	font-weight: bold;
+	font-size: 16px;
+	padding-left: 15px;
+}
+
+#contact-box {
+	background-color: #cecece;
+	border-radius: 4px;
+	padding: 13px 13px 1px 13px;
+	width: max-content;
+	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+	text-align: left;
+}
+
+#footer {
+	color: white;
+	clear: both;
+	text-align: center;
+	font-size: 10px;
+}

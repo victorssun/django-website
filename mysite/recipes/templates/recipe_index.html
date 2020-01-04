@@ -1,0 +1,94 @@
+{% extends "base.html" %}
+{% load static %}
+{% block page_content %}
+<link rel="stylesheet" type="text/css" href="{% static 'style.css' %}">
+
+<head>
+	<link rel="icon" type="image/gif/png" href="{% static 'imgs/logo_title.png' %}">
+	<title>Victor Sun | Recipe List</title>
+</head>
+<!--- navigation bar --->
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+	<img class="nav_icon" src="{% static 'imgs/logo_nav.png' %}">
+	<a class="navbar-brand" href="#">Recipe List</a>
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<div class="collapse navbar-collapse" id="navbarNavDropdown">
+		<ul class="navbar-nav">
+			<li class="nav-item active">
+				<a class="nav-link" href="#">Recipes <span class="sr-only">(current)</span></a>
+			</li>
+			<li class="nav-item">
+				<a class="nav-link" href="./../main">Return to Website</a>
+			</li>
+		</ul>
+	</div>
+	<img class="nav_icon" src="{% static 'imgs/logo_nav.png' %}">
+</nav>
+
+<div id="content">
+	<center><h1>Recipes</h1>
+	<p>My cooking philosophy is cooking without a recipe. My favourite foods to cook are quick home-style foods that require very little dishes to clean. <br> This is a list of 'recipes' with no instructions or quantative amount of ingredients.</p></center><br>
+	<div class="row">
+	{% for recipe in recipes %}
+		<div class="col-md-2">
+			<div class="card mb-2">
+				<img class="card-img-top" src="{{ recipe.img.url }}">
+				<div class="card-body">
+					<center>
+					<h5 class="card-title">{{ recipe.name }}</h5>
+					<p class="card-text">
+					<b>Course:</b> {{ recipe.course }} <br>
+					<b>Cuisine:</b> {{ recipe.cuisine }} <br>
+					</p>
+					<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modal{{ recipe.pk }}">Read More</button>
+					</center>
+				</div>
+			</div>
+		</div>
+
+		<!-- Modal -->
+		<div id="modal{{ recipe.pk }}" class="modal fade" role="dialog">
+			<div class="modal-dialog modal-dialog-centered modal-lg">
+
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<h3>{{ recipe.name }}</h3>
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title"></h4>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-md-6 v-center">
+							<img src="{{ recipe.img.url }}" alt="" width="">
+						</div>
+						<div class="col-md-6 box-shift">
+							<h5>{{ recipe.cuisine }} {{ recipe.course }} dish: </h5>
+							<p>{{ recipe.description }}</p>
+							<h5>Ingredients:</h5>
+							<p>{% for ingredient in recipe.ingredient_set.all reversed %}
+							<li>{{ ingredient.amount }} {{ ingredient.item }}</li>
+							{% endfor %}</p>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<p>Date mod: {{ recipe.date_modified }} <button type="button" class="btn btn-default" data-dismiss="modal">Close</button> </p>
+				</div>
+			</div>
+
+			</div>
+		</div>
+		{% endfor %}
+	</div>
+</div>
+
+<!--- footer --->
+<footer class="page-footer font-small mdb-color pt-4">
+	<div id="footer_style" class="text-center py-1">
+		<a href="mailto:contact@victorssun.com"> Contact </a>
+	</div>
+</footer>
+{% endblock %}
